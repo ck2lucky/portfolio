@@ -9,8 +9,6 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="icon" href="img/favicon.ico">
     
-
-    
     <style>
         *{margin:0; padding:0;}
         li{list-style: none;}
@@ -23,14 +21,12 @@
             background: #f99;
         }
         section{height:100vh; position:relative;}
-        section:nth-child(1){background: #ff5;}
-        section:nth-child(2){background:url(https://images.pexels.com/photos/347134/pexels-photo-347134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-            background-size: cover;
-        }
-        section:nth-child(3){background: #ff7;}
-        section:nth-child(4){background: #ff9;}
-        section:nth-child(5){background: #ffb;}
-        section:nth-child(6){background: #ffd;}
+        section:nth-child(1){background:url('img/0.jpg'); background-size: cover; background-position: center center;}
+        section:nth-child(2){background:url('img/1.jpg'); background-size: cover; background-position: center center;}
+        section:nth-child(3){background:url('img/2.jpg'); background-size: cover; background-position: center center;}
+        section:nth-child(4){background:url('img/3.jpg'); background-size: cover; background-position: center center;}
+        section:nth-child(5){background:url('img/4.jpg'); background-size: cover; background-position: center center;}
+        section:nth-child(6){background:url('img/5.jpg'); background-size: cover; background-position: center center;}
 
         section .box{position:absolute; top:300px; left:-300px; opacity:0; border:2px #333 solid;  width:150px; height: 150px; transition:all .6s;}
         section .txt{position:absolute; top:-300px; left:700px; opacity:0; border:2px #333 solid; width:300px; height:150px; background: #fff; transition:all .6s;}
@@ -39,17 +35,19 @@
         section.active .txt{position:absolute; top:300px; left:700px; opacity:1; border:2px #333 solid; width:300px; height:150px; background: #fff; }
 
         .targetMenu{width:50px; height:300px; position:fixed; top:calc(50% - 150px); left:calc(100% - 150px); z-index: 9999999;}
-        .targetMenu a{display:block; width:30px; height: 30px; line-height: 30px; text-align: center; background:#fff; font-size: 1.2rem; border-radius: 50%;
-            cursor: pointer; transition:all .6s;
+        .targetMenu a{display:block; width:20px; height: 20px; line-height: 20px; text-align: center; background:#ccc; font-size: 1.2rem; border-radius: 50%;
+            cursor: pointer; transition:all .6s; margin: 0 auto;
         }
-        .targetMenu li{width:50px; height: 50px; line-height: 50px;}
-        .targetMenu a.on{width:40px; height:40px; background: dodgerblue; color:#fff; font-size: 1.5rem;}
+        .targetMenu li{width:50px; height: 50px; text-align: center;}
+        .targetMenu a.on{width:22px; height:22px; background: dodgerblue;  font-size: 1.5rem;}
 
         section .title{
             position: absolute;
-            top:40%;
-            left:30%;
+            top:30%;
+            left:20%;
             font-size: 4rem;
+            color:#fff;
+            transform: translate(-50%,-50%);
         }
         section .title span{
             display:inline-block;
@@ -148,12 +146,12 @@
 <body>
     <div class="targetMenu">
         <ul>
-            <li><a herf="#none" class="on" datanum = '0'>1</a></li>
-            <li><a herf="#none" datanum = '1'>2</a></li>
-            <li><a herf="#none" datanum = '2'>3</a></li>
-            <li><a herf="#none" datanum = '3'>4</a></li>
-            <li><a herf="#none" datanum = '4'>5</a></li>
-            <li><a herf="#none" datanum = '5'>6</a></li>
+            <li><a herf="#none" class="on" datanum = '0'></a></li>
+            <li><a herf="#none" datanum = '1'></a></li>
+            <li><a herf="#none" datanum = '2'></a></li>
+            <li><a herf="#none" datanum = '3'></a></li>
+            <li><a herf="#none" datanum = '4'></a></li>
+            <li><a herf="#none" datanum = '5'></a></li>
         </ul>
     </div>
     <div id="wrap">
