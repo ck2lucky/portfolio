@@ -57,3 +57,95 @@
         return false;
         });
         //스크롤 막기 끝
+
+        //차트
+        $('.skillchart').click(
+            function(){
+                $(this).easyPieChart({
+                    barColor: '#69f',
+                    trackColor: '#ccc',
+                    scaleColor: '#fff',
+                    lineCap: 'butt',
+                    lineWidth: 10,
+                    size: 100,
+                    animate: 1000
+                });
+                var jumsu = $(this).attr('data-percent');
+                $(this).children().children('.jumsu').html(jumsu);
+            }
+        );
+
+        /* 겔러리 슬라이드 */
+        var imgWidth = innerWidth;
+		var gallMove = document.querySelector("#galleryZone ul");
+		var gallZone = document.querySelectorAll("#galleryZone img");
+		var arrow = document.querySelectorAll(".arrow");
+            
+		window.addEventListener('load',start);
+		gallZone.forEach((e)=>{e.addEventListener('mouseover',stop)});
+        gallZone.forEach((e)=>{e.addEventListener('mouseout',start)});
+
+		var interval;
+		var aniStartPoint;
+		var aniEndPoint;
+		var gcount = 0;
+		var slideon = "on";
+
+		function start(){
+			interval = setInterval(go, 2000);
+			arrow[0].style.opacity = "0";
+			arrow[1].style.opacity = "0";
+		}
+
+		function go(){
+			if(slideon == "on"){
+
+				slideon = "off";
+
+				if(gcount == 5) gcount = 0;
+
+				aniStartPoint = -imgWidth * gcount;
+				gcount++;
+				aniEndPoint = -imgWidth * gcount;
+
+				goAni();
+			}
+		}
+
+		function left(){
+			if(slideon == "on"){
+
+				slideon = "off";
+
+				if(gcount == 0) gcount = 5;
+
+				aniStartPoint = -imgWidth * gcount;
+				gcount--;
+				aniEndPoint = -imgWidth * gcount;
+
+				goAni();
+			}
+		}
+
+		function goAni(){
+			var ani = gallMove.animate([
+				{
+					transform:"translateX(" + aniStartPoint + "px)"
+				},{
+					transform:"translateX(" + aniEndPoint + "px)"
+				}
+			],1000);
+
+			ani.addEventListener('finish',function(){
+				gallMove.style.transform = "translateX(" + aniEndPoint + "px)";
+				slideon = "on";
+			});
+		}
+
+		function stop(){
+			clearInterval(interval);
+			arrow[0].style.opacity = "0.3";
+			arrow[1].style.opacity = "0.3";
+		}
+
+        

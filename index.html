@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrolling Transition Part2</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <link rel="shortcut icon" href="img/favicon.ico"><!-- 수정 -->
     <link rel="icon" href="img/favicon.ico"><!-- 수정 -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -71,6 +74,36 @@
                     <li><div></div></li>
                 </ul>
             </div>
+
+            <!-- 스킬차트 -->
+            <div id="skillcontainer">
+                <div class="skillchart" data-percent="95">
+                    <span class="skilltitle">HTML5<br><span class="jumsu">click</span></span>
+                </div>
+                <div class="skillchart" data-percent="85">
+                    <span class="skilltitle">CSS3<br><span class="jumsu">click</span></span>
+                </div>
+                <div class="skillchart" data-percent="65">
+                    <span class="skilltitle" title="자바스크립트">JS<br><span class="jumsu">click</span></span>
+                </div>
+                <div class="skillchart" data-percent="65">
+                    <span class="skilltitle" title="포토샵">PS<br><span class="jumsu">click</span></span>
+                </div>
+                <div class="skillchart" data-percent="65">
+                    <span class="skilltitle" title="일러스트레이터">Ai<br><span class="jumsu">click</span></span>
+                </div>
+                <div class="skillchart" data-percent="65">
+                    <span class="skilltitle" title="인디자인">Id<br><span class="jumsu">click</span></span>
+                </div>
+                <div class="skillchart" data-percent="65">
+                    <span class="skilltitle">Figma<br><span class="jumsu">click</span></span>
+                </div>
+            </div>
+
+            <!-- portfolio 사선 배경 -->
+            <div class="port">Port</div>
+            <div class="folio">folio</div>
+
         </section>
         <section><!-- 3번째 색션 대표 작품 -->
             <div class="leftSul">
@@ -99,13 +132,70 @@
                 
             </div>
         </section>
-        <section>
-            <div class="box"></div>
-            <div class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis assumenda exercitationem modi eaque perspiciatis incidunt ullam nemo quo dolorem. Adipisci similique officiis omnis in commodi id exercitationem debitis quo.</div>
+
+        <section><!-- 4번째 색션 사이트 리뉴얼 -->
+            <div class="leftSul">
+                <div class="Ptitle">
+                    Project 02 <br>
+                    Renewal
+                </div>
+                <div class="Dintro">
+                    <h3>Introduce</h3>
+                    <p>
+                        이 프로젝트는 반응형 사이트로....<br>
+                        이 프로젝트는 반응형 사이트로....<br>
+                        이 프로젝트는 반응형 사이트로....<br>
+                    </p>
+                    <h3>Use Fonts</h3>
+                    <p><span>Noto Sans Kr</span> / <span>Open Sans</span></p>
+                    <h3>Color System</h3>
+                    <p>
+                        <span class="colorBox"></span> #ffaacc <br>
+                        <span class="colorBox"></span> #ffbbcc <br>
+                        <span class="colorBox"></span> #aaaacc <br>
+                    </p>
+                </div>
+            </div>
+            <div class="rightMokup">
+                
+            </div>
         </section>
-        <section>
-            <div class="box"></div>
-            <div class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis assumenda exercitationem modi eaque perspiciatis incidunt ullam nemo quo dolorem. Adipisci similique officiis omnis in commodi id exercitationem debitis quo.</div>
+
+        <section><!-- 5번째 겔러리 슬라이드 -->
+            <div class="leftSul">
+                <div class="Ptitle">
+                    Project 03 <br>
+                    Gallery Slide
+                </div>
+                <div class="Dintro">
+                    <h3>Introduce</h3>
+                    <p>
+                        이 프로젝트는 반응형 사이트로....<br>
+                        이 프로젝트는 반응형 사이트로....<br>
+                        이 프로젝트는 반응형 사이트로....<br>
+                    </p>
+                    <h3>Use Fonts</h3>
+                    <p><span>Noto Sans Kr</span> / <span>Open Sans</span></p>
+                    <h3>Color System</h3>
+                    <p>
+                        <span class="colorBox"></span> #ffaacc <br>
+                        <span class="colorBox"></span> #ffbbcc <br>
+                        <span class="colorBox"></span> #aaaacc <br>
+                    </p>
+                </div>
+            </div>
+            <div id="galleryZone">
+                <ul>
+                    <li><a href="#none"><img src="gall_img/1.jpg" alt="그림1"></a></li>
+                    <li><a href="#none"><img src="gall_img/2.jpg" alt="그림2"></a></li>
+                    <li><a href="#none"><img src="gall_img/3.jpg" alt="그림3"></a></li>
+                    <li><a href="#none"><img src="gall_img/4.jpg" alt="그림4"></a></li>
+                    <li><a href="#none"><img src="gall_img/5.jpg" alt="그림5"></a></li>
+                    <li><a href="#none"><img src="gall_img/1.jpg" alt="그림1"></a></li>
+                </ul>        
+                <div class="arrow left"><a href="#"><img src="img/left.png" alt="" onclick="left()"></a></div>
+                <div class="arrow right"><a href="#"><img src="img/right.png" alt="" onclick="go()"></a></div>				
+            </div>
         </section>
         <section>
             <div class="box"></div>
