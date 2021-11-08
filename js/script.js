@@ -91,7 +91,7 @@
 		var slideon = "on";
 
 		function start(){
-			interval = setInterval(go, 3000);
+			interval = setInterval(go, 3000); //3초에 한번씩 슬라이드 진행
 			arrow[0].style.opacity = "0";
 			arrow[1].style.opacity = "0";
 		}
@@ -101,7 +101,7 @@
 
 				slideon = "off";
 
-				if(gcount == 5) gcount = 0;
+				if(gcount == 6) gcount = 0; //슬라이드 이미지 갯수에 맞게 현재는 5
 
 				aniStartPoint = -imgWidth * gcount;
 				gcount++;
@@ -116,7 +116,7 @@
 
 				slideon = "off";
 
-				if(gcount == 0) gcount = 5;
+				if(gcount == 0) gcount = 6; //슬라이드 이미지 갯수에 맞게 현재는 5
 
 				aniStartPoint = -imgWidth * gcount;
 				gcount--;
