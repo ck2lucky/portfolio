@@ -80,7 +80,7 @@ section .protitle{
     width: 30%;
     height: 50vh;
     position: absolute;
-    top:25vh;
+    top:20vh;
     left:-50%;
     transition:.6s;
 }
@@ -88,7 +88,7 @@ section.active .protitle{
     width: 30%;
     height: 50vh;
     position: absolute;
-    top:25vh;
+    top:20vh;
     left:10%;
 }
 section .subject{
@@ -179,7 +179,7 @@ section .profile{
     position:absolute;
     width:30%;
     height:35vh;
-    top:40vh;
+    top:25vh;
     left:70%;
     transition:.6s;
     transition-delay: .6s;
@@ -189,7 +189,7 @@ section.active .profile{
     position:absolute;
     width:30%;
     height:35vh;
-    top:40vh;
+    top:25vh;
     left:50%;
     opacity: 1;
 }
@@ -210,7 +210,7 @@ section.active .profile{
     width:300px;
     height:180px;
     position: absolute;
-    top:40%;
+    top:30%;
     left:60%;
     background:#adf;
 }
@@ -253,8 +253,8 @@ section.active .chart .graph li:nth-child(3) div{
 #skillcontainer{
     position:absolute;
     width:70%; 
-    left:15%;
-    top:80vh;
+    left:20%;
+    top:60vh;
     display: flex;
 }
 .skillchart{
@@ -349,20 +349,22 @@ section.active .rightMokup{
 }
 
 /* section 5번째 겔러리 슬라이드 */
+.rightMokup{overflow: hidden; position: relative;}
 #galleryZone {text-align: center; position:absolute; 
-    width:100%; height:100vh;
+    width:100%; height:100%;
     overflow: hidden;
 }
-#galleryZone li{width:100%; height:100vh; display:flex;
+#galleryZone ul{width:600%; height:100%; display:flex; }
+#galleryZone li{width:100%; height:100%; display:flex;
     justify-content: center;
 }
 #galleryZone li a{display:block; align-self: center;}
-#galleryZone ul{width:600%; display:flex; }
+
 .arrow{position: absolute; width:57px; height:57px; top:60px; opacity:0;
     transition:.6s;
 }
-.left{left:20px;}
-.right{left:310px;}  
+.left{position: absolute; top:50%; left:20%; transform: translate(-50%,-50%);}
+.right{position: absolute; top:50%; left:80%; transform: translate(-50%,-50%);}  
 
 
 .Dintro{

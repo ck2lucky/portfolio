@@ -76,12 +76,11 @@
         );
 
         /* 겔러리 슬라이드 */
-        var imgWidth = innerWidth;
+        var imgWidth = document.querySelector("#galleryZone li").clientWidth;
 		var gallMove = document.querySelector("#galleryZone ul");
 		var gallZone = document.querySelectorAll("#galleryZone img");
 		var arrow = document.querySelectorAll(".arrow");
-            
-		window.addEventListener('load',start);
+        		
 		gallZone.forEach((e)=>{e.addEventListener('mouseover',stop)});
         gallZone.forEach((e)=>{e.addEventListener('mouseout',start)});
 
@@ -92,7 +91,7 @@
 		var slideon = "on";
 
 		function start(){
-			interval = setInterval(go, 2000);
+			interval = setInterval(go, 3000);
 			arrow[0].style.opacity = "0";
 			arrow[1].style.opacity = "0";
 		}
