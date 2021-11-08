@@ -129,9 +129,11 @@
 		function goAni(){
 			var ani = gallMove.animate([
 				{
-					transform:"translateX(" + aniStartPoint + "px)"
+					transform:"translateX(" + aniStartPoint + "px)",
+                    opacity:"0"
 				},{
-					transform:"translateX(" + aniEndPoint + "px)"
+					transform:"translateX(" + aniEndPoint + "px)",
+                    opacity:"1"
 				}
 			],1000);
 
